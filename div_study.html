@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <style>
+        ul {display: flex;}/*박스를 정렬해야 할 때 부모값인 ul에게 flex를 주어서 가로로 정렬하게 만든다. 요소의 값만큼의 사이즈로 줄어든다.*/
+        ul li:first-child{width: 100%;}/*flex-wrap을 쓰면 width 100%차지하게 되면서 다른 친구들이 밑으로 정렬이 된다. 여기서는 한 친구에게만 부여해서 나머지 친구는 밑으로 떨어짐.*/
+        ul li{margin: 10px;}/*box자체를 움직이기 때문에 다른 box와 겹쳐질 수도 있다. 박스 자체를 통재로 옮길때 자주 쓰인다. */
+        ul p{padding: 10px;}/*box로부터 떨어져서 안에서 사이즈가 조절됨. 글자에 대한 위치를 움직일 때는 padding이 낫다.*/
+
+    </style>
+  </head>
+  <body>
+    <div>div의 역할은 무엇인가? width 100%공간을 차지하는 둥둥 떠있는 상자다.</div>
+    <p>p 태그 속성값에 기본적으로 width 100%, margin값 존재함.</p>
+    <!-- 기본적으로 margin을 0으로 만들고 padding값으로 상하 간격을 조정한다. -->
+    <h1>가장 큰 강조나 제목에 사용한다.</h1>
+    <h2>강조의 우선순위와 중요도에 따라서</h2>
+    <h3>사이즈를 맞추어서</h3>
+    <h4>사용한다는</h4>
+    <h5>특징이</h5>
+    <h6>있다.</h6>
+    <span>span은 공중에 떠있는 무의미한 박스와도 같다. why? 요소만큼의 간격을 차지한다는 점이 특징이라서!</span>
+    <ul><!--(왼쪽 padding값,display 등 ul에서 조정해야 한다.)플룻에 자주 쓰인다.-->
+        <li>항목을</li>
+        <li>나타낼 떄 사용한다.</li>
+        <li>요소가 여러가지인 경우, 다닥다닥 본인들끼리 붙어있다.</li>
+        <li>자체적으로 왼쪽 padding값이 존재하며 태그 안에 글을 작성해야 한다.</li>
+    </ul>
+    <table><!--옆으로 정렬된다.(왼쪽 간격이 조금 두고 있어서 ul에 비해 정렬이 어렵다.)-->
+    <tr>
+        <td>td1</td>
+        <td>td2</td>
+        <td>span과 같은 요소만큼의 사이즈를 가지고 있지만, 차이점은 table내에서 tr과 함께 사용이 가능하다는 차이점이 있다.</td>
+    </tr>
+    <tr><!--요소가 들어오기 전까지는 절대 보이지 않으며 간격 조절을 해야할 때 줄추가 느낌으로 쓰기도 함.-->
+        <td></td>
+    </tr>
+    </table><!--id는 동작수행 등에 쓰일 경우 작성(값을 받아오고, 컨트롤할 수 있다.) name을 통해 값을 어떻게 받을 것인지, 데이터를 어떻게 불러올 건지-->
+    <form action="" name="" id=""><!--연결되어 동작 될 것은 form안에 들어있어야 연동(연걸이 된다.)-->
+        <input type="text" value="ddd"><!--value값을 input에는 보여줄 내용 외에는 값으로써 작성해서는 안된다.-->
+        <input type="password">
+        <input type="button" class=""><!--버튼에 value은 상관없다. button이2개이상이고 각각 다른 것을 입력받는다면 class를 통해 이름을 지어준다.-->
+        <input type="email"><!--이메일 형식에 맞지 않으면 태그 자체에서 오류를 띄운다.-->
+        <input type="submit"><!--하나의 form에는 하나의 submit만 존재한다.(안정성문제). 값을 전송하는 역할을 한다.-->
+        <input type="reset">
+        
+    </form>
+  </body>
+</html>

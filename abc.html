@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <style>
+        /*공통 css*/
+        a{text-decoration: none; color: black;background: #fff;}
+        ul{list-style: none; padding-left:0px;margin: 0px 0px;}/*list-style전체적으로 없애기*/
+        .wrap{width: 1500px; margin: 0 auto;}/*전체 정렬*/
+        p{margin: 0px; display: block;}
+        
+        /*head css*/
+        .head{display: flex;justify-content: space-between;background: #fff;}/*끝-끝으로 정렬(검사를 통해 클릭하여 보고 복사해서 여기에 붙여넣기 가능*/
+        .head ul{display: flex;}/*login, join 가로 정렬*/
+        .head ul li{padding: 0px 10px;line-height: 70px;}/*글자 간격*/
+        .head ul li a{color: #ccc;}/*글자색*/
+        /*main_box css*/
+        .main_box{width: 100%; text-align: center; background: #eee;}
+        .main_box input[type="text"]{width: 500px;padding: 15px; text-align: center; border-radius: 15px; border: 1px solid #ccc; margin-top: 30px;}
+        .main_box ul{display: flex; flex-wrap: wrap;justify-content: center;}    
+        .main_box ul li{width: 40%; border: 1px solid #000; border-radius: 50%; margin: 50px; overflow:hidden;}/* border-radius 50%로 원을 만들었다. 여기에 hidden을 넣어야 그림이 박스 뒤로 넘어가진다.*/
+        .main_box ul li img{width: 700px;  text-align: center;}
+        
+        /*foot css*/
+        .foot{color: #ccc;}
+        .foot p{text-align: center;background-color: #eee;}
+  </style>
+  </head>
+  <body><!--작성시 왼쪽부터 오른쪽으로 위에서 아래로 순서대로 작성한다.-->
+    <div><!-- 혹시나 문제 생기면 이친구로 조정할 수 있게 예비로 냅둠 -->
+       <div class="wrap">
+        <div class="head">
+                <a href=""><h1>BOONNIE</h1></a><!--텍스트 태그들은 바로 밖에 a태그로 감싼다.-->
+                   <ul>
+                    <li><a href="">Login</a></li><!--a태그에는 css를 안주는게 좋다.-->
+                    <li><a href="">Join</a></li><!--li와 같은 친구들은 a태그를 안에 넣어준다.-->
+                  </ul>
+        </div>          
+            <div class="main_box"><!-- wrap으로 이 안의 요소들을 가운데 정렬 맞춘다. -->
+                <form action="">
+                    <input type="text" placeholder="search" name="search"><label for="name"><img src=""></label>
+                </form>
+
+                <ul><!--메인페이지 내용(그림 등)-->
+                       <li><a href=""><img src="img_1.jpg"></a></li> 
+                       <li><a href=""><img src="img_1.jpg"></a></li>
+                       <li><a href=""><img src="img_1.jpg"></a></li> 
+                       <li><a href=""><img src="img_1.jpg"></a></li> 
+                </ul>
+            </div>
+            <div class="foot"><!-- 글자니까 p태그로 편하게 작성. 후에 수정으로 오른쪽/왼쪽 이동해도 상관없음-->
+                <p>Copyright 2022, BONNIE. All rights reserved</p>
+        </div> 
+      </div>
+    </div>
+  </body>
+  </html>
